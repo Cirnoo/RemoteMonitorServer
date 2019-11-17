@@ -1,0 +1,18 @@
+#include "outputer.h"
+#include <QMainWindow>
+#include <QTextBrowser>
+Logger::Logger()
+{
+    
+}
+
+void Logger::SetLoger(QTextBrowser * o)
+{
+    p = o;
+}
+
+void Logger::Info(const QString & str)
+{
+    Q_ASSERT(p!=nullptr);
+    p->append(str);
+}
